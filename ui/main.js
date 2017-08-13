@@ -13,7 +13,7 @@ img.onclick=function()
         
     }
 };
-*/
+*/var counter=0;
 //counter code
 var button=document.getElementById("counter");
 button.onclick=function(){
