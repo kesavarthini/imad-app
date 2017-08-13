@@ -18,8 +18,8 @@ img.onclick=function()
 var button=document.getElementById("counter");
 button.onclick=function(){
     //make a req to the counter and capture the response and store in it a variable,render the variablr in the correct 
-    counter= counter+1;
+    counter= counter + 1;
     var span=document.getElementById("count");
-    spaninnerHTML=counter.toString();
+    span.innerHTML=counter.toString();
     
 };
