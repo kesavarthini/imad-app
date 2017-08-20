@@ -23,13 +23,13 @@ button.onclick=function(){
     request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE)
         {
-            if(request.status === 200)
-        { var counter = request.responseText;
+            if(request.status === 200){
+           var counter = request.responseText;
            var span=document.getElementById('count');
-    span.innerHTML=counter.toString();
+           span.innerHTML=counter.toString();
         }
      
-}
+        }
 };
 
   //makereq
