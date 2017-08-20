@@ -14,7 +14,7 @@ img.onclick=function()
     }
 };
 
-*/var counter=0;
+*/
 //create req
 var button=document.getElementById("counter");
 button.onclick=function(){
