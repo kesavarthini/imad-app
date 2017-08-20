@@ -15,13 +15,24 @@ img.onclick=function()
 };
 
 */var counter=0;
-//counter code
+//create req
 var button=document.getElementById("counter");
 button.onclick=function(){
     //make a req to the counter and capture the response and store in it a variable,render the variablr in the correct 
-    var request = new XMlhttpRequest();
-    counter= counter + 1;
-    var span=document.getElementById("count");
+    var request = new XMlHttpRequest();
+    request.onreadystatechange=function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            if(request.status===200)
+        { var counter = request.responseText;
+           var span=document.getElementById("count");
     span.innerHTML=counter.toString();
-    
+        }
+     
+}
+};
+
+  //makereq
+  request.open('GET','http://ickesavarthini.imad.hasura-app.io/counter',true);
+  request.send(null);
 };
