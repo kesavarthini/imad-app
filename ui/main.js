@@ -19,7 +19,7 @@ img.onclick=function()
 var button=document.getElementById('counter');
 button.onclick=function(){
     //make a req to the counter and capture the response and store in it a variable,render the variablr in the correct 
-    var request = new XMlHttpRequest();
+    var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
         if(request.readyState === XMLHttpRequest.DONE)
         {
@@ -32,7 +32,7 @@ button.onclick=function(){
         }
 };
 
-  //makereq
+ //makereq
   request.open('GET','http://ickesavarthini.imad.hasura-app.io/counter',true);
   request.send(null);
 };
